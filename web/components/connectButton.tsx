@@ -30,13 +30,22 @@ export const ConnectBtn = () => {
 
   if (!isConnected) {
     return (
-      <button
-        className="btn"
-        onClick={openConnectModal}
-        disabled={isConnecting}
-      >
-        {isConnecting ? 'Connecting...' : 'Connect your wallet'}
-      </button>
+      <div className="max-w-5xl w-full flex items-center justify-between">
+        <div>
+          <Button asChild variant="link" className="font-serif text-3xl">
+            <Link href="/">Hanns</Link>
+          </Button>
+        </div>
+        <div>
+          <button
+            className="btn"
+            onClick={openConnectModal}
+            disabled={isConnecting}
+          >
+            {isConnecting ? 'Connecting...' : 'Connect your wallet'}
+          </button>
+        </div>
+      </div>
     );
   }
 
